@@ -1,0 +1,18 @@
+{
+  "name": "nextcms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "next": "^9.2.1-canary.2",
+    "node-fetch": "^2.6.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}

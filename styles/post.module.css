@@ -1,0 +1,27 @@
+.post {
+  margin-bottom: 5em;
+}
+
+.post img {
+  max-width: 100%;
+}
+
+.post.excerpt :global(.link-more) {
+  display: none;
+}
+
+.comment {
+  padding: 1rem 1rem 0;
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid #ddd;
+  margin-bottom: 2rem;
+}
+
+.comment h4 {
+  margin: 0;
+}
+
+.comment img {
+  margin-right: 1rem;
+}

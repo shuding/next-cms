@@ -1,0 +1,48 @@
+.container {
+  margin: auto;
+  max-width: 900px;
+  padding: 20px 20px 60px;
+  font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  word-break: break-word;
+  font-kerning: auto;
+  font-variant: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  hyphens: auto;
+}
+
+.container a {
+  cursor: pointer;
+  color: #0076FF;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid white;
+}
+
+.container a:hover {
+  border-bottom: 1px solid #0076FF;
+}
+
+.header {
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.footer {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.footer a {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.tip {
+  float: right;
+  user-select: none;
+}
