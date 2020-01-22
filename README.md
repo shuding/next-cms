@@ -1,6 +1,6 @@
 # Next-CMS
 
-[nextjs-wordpress.now.sh](https://nextjs-wordpress.now.sh)
+[nextcms.now.sh](https://nextcms.now.sh)
 
 Next-CMS is an example showing how you can do [Next.js SSG](https://github.com/zeit/next.js/issues/9524) using WordPress as the backend API.
 
@@ -67,6 +67,14 @@ Here's an example:
 ```
 
 Note that the CMS components will not cause waterfalls, and duplicate requests will be deduped.
+
+## Deploy
+
+Deploy this example with ZEIT:
+
+[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/quietshu/next-cms)
+
+...or deploy your own project via [zeit.co/new](https://zeit.co/new).
 
 ## Development
 
