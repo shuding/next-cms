@@ -8,7 +8,7 @@ export default function Comments ({ id }) {
     <CMS endpoint={"/wp-json/wp/v2/comments?post=" + id}>{comments =>
       comments.length ? comments.map(comment =>
         <div key={comment.id} className={styles.comment}>
-          <img src={comment.author_avatar_urls['48']} style={{ width: 48, height: 48 }} />
+          <img src={comment.author_avatar_urls['48']} />
           <div>
             <h4>{comment.author_name}</h4>
             <small>{comment.date}</small>
