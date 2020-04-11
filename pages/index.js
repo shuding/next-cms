@@ -20,7 +20,7 @@ const Page = withCMSPage(() => {
 
 export default Page
 
-export async function unstable_getStaticProps() {
+export async function getStaticProps() {
   const props = await getCMSStaticProps(Page)
   return { props, revalidate: 5 }
 }

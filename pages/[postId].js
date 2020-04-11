@@ -18,17 +18,21 @@ const Page = withCMSPage(({ postId }) => {
 
 export default Page
 
-export async function unstable_getStaticPaths() {
+export async function getStaticPaths() {
   const fetch = require('node-fetch')
   const WP_URL = process.env.WP_URL || 'https://demo.wp-api.org'
 
   const posts = await fetch(WP_URL + '/wp-json/wp/v2/posts?_fields=id').then(res => res.json())
-  return posts.map(post => {
-    return { params: { postId: String(post.id) } }
-  })
+  
+  return {
+    paths: posts.map(post => {
+      return { params: { postId: String(post.id) } }
+    }),
+    fallback: false
+  }
 }
 
-export async function unstable_getStaticProps({ params }) {
+export async function getStaticProps({ params }) {
   const props = await getCMSStaticProps(Page, { postId: params.postId })
   return { props, revalidate: 5 }
 }
