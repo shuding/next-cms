@@ -1,6 +1,6 @@
 # Next-CMS
 
-[nextcms.now.sh](https://nextcms.now.sh)
+[nextjs-wordpress.now.sh](https://nextjs-wordpress.now.sh)
 
 Next-CMS is an example showing how you can do [Next.js SSG](https://github.com/zeit/next.js/issues/9524) using WordPress as the backend API.
 
@@ -8,7 +8,7 @@ Next-CMS is an example showing how you can do [Next.js SSG](https://github.com/z
 - **Always Available**: serves the cache even the API is down
 - **Flexible**: you can switch to any CMS backend (e.g.: XML-RPC calls)
 
-Similar to our previous example: [Notion based blog with Next.js](https://github.com/ijjk/notion-blog), this example has all the benefits of **Next.js SSG**, but also includes a new **CMS component** for data fetching:
+Similar to our **Next.js + Notion** example: [Notion based blog with Next.js](https://github.com/ijjk/notion-blog), this example has all the benefits of **Next.js SSG**, but also includes a new **CMS component** for data fetching:
 
 ## CMS Component
 
@@ -27,12 +27,12 @@ function Header () {
 }
 ```
 
-In fact, you can use or extend the [`<CMS/>` component](https://github.com/quietshu/next-cms/blob/master/lib/cms.js) to load data in the way you like. 
+And you can use or extend the [`<CMS/>` component](https://github.com/quietshu/next-cms/blob/master/lib/cms.js) to load data in the way you like. 
 
 ### Data Fetching Only Happens in Server Side
 
-There's no client runtime. So you don't need to include an isomorphic fetch library anymore.  
-The code above will generate the following markup:
+No client runtime. So you don't need to include an isomorphic fetch library anymore.  
+The code above will generate the following markup directly:
 
 ```html
 <div>
@@ -43,10 +43,10 @@ The code above will generate the following markup:
 
 ### Automatically Generated `getStaticProps`
 
-Just like other components, you can use `<CMS/>` components anywhere and combine them.
+You can use `<CMS/>` anywhere deep down the component tree, or combine them.
 
-Also, you don't need to write your data fetching code inside `getStaticProps`, or pass `props` down the component tree.  
-With `<CMS/>`, the data needed will be **analyzed and fetched** automatically. 
+The benefit is that you don't need to write your data fetching code inside `getStaticProps` (and pass the data via `props` to the child components).  
+With `<CMS/>`, the data needed will be **analyzed and fetched** automatically, and in parallel. 
 
 Here's an example:
 
@@ -70,11 +70,11 @@ Note that the CMS components will not cause waterfalls, and duplicate requests w
 
 ## Deploy
 
-Deploy this example with ZEIT:
+Deploy this example with Vercel:
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/quietshu/next-cms)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/shuding/next-cms)
 
-...or deploy your own project via [zeit.co/new](https://zeit.co/new).
+...or deploy your own project via [vercel.com/import](https://vercel.com/import).
 
 ## Development
 
@@ -92,14 +92,16 @@ WP_URL=https://my-wordpress-site.com yarn dev
 
 ## Authors
 
-- Shu Ding ([@shuding_](https://twitter.com/shuding_)) – [ZEIT](https://zeit.co)
-- Guillermo Rauch ([@rauchg](https://twitter.com/rauchg)) – [ZEIT](https://zeit.co)
+- Shu Ding ([@shuding_](https://twitter.com/shuding_)) – [Vercel](https://vercel.com)
+- Guillermo Rauch ([@rauchg](https://twitter.com/rauchg)) – [Vercel](https://vercel.com)
 
-Follow ZEIT on [Twitter](https://twitter.com/zeithq).
+Follow Vercel on [Twitter](https://twitter.com/vercel).
 
 Released under the MIT license.
 
 <br/>
 <br/>
 
-[![](https://assets.zeit.co/image/upload/v1556749970/repositories/vrs/zeit.svg)](https://zeit.co)
+<a href="vercel.com" target="_blank">
+  <img width="200" alt="Vercel, Inc" src="https://assets.vercel.com/image/upload/v1585434008/front/assets/design/vercel.svg" />
+</a>
