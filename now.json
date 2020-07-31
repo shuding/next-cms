@@ -1,2 +1,10 @@
 {
+  "build": {
+    "env": {
+      "WP_URL": "@wp-url1"
+    }
+  },
+  "env": {
+    "WP_URL": "@wp-url1"
+  }
 }
