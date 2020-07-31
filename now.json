@@ -1,10 +1,2 @@
 {
-  "build": {
-    "env": {
-      "WP_URL": "@wp-url"
-    }
-  },
-  "env": {
-    "WP_URL": "@wp-url"
-  }
 }
