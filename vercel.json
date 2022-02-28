@@ -1,0 +1,15 @@
+{
+  "build": {
+    "env": {
+      "WP_URL": "@wp-url"
+    }
+  },
+  "env": {
+    "WP_URL": "@wp-url"
+  },
+  "redirects": [{
+    "source": "/",
+    "destination": "https://next-blog-wordpress.vercel.app",
+    "permanent": true
+  }]
+}
